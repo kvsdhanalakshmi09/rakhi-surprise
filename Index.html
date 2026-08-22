@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Surprise For My Brother ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================================= -->
+<!-- WELCOME SCREEN -->
+<!-- ================================= -->
+
+<section class="welcome-screen" id="welcomeScreen">
+
+    <div class="game-card">
+
+        <div class="lock">
+            🎁
+        </div>
+
+        <h1>
+            A Little Surprise
+            <br>
+            For My Brother ❤️
+        </h1>
+
+        <p>
+            Hey Nana! 👀
+            <br><br>
+            I made something special for you.
+            <br>
+            But there's a tiny catch... 😌
+        </p>
+
+        <button onclick="openSurprise()">
+            🎁 Open Your Surprise
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- MAIN SURPRISE -->
+<!-- ================================= -->
+
+<section id="surprise" style="display: none;">
+
+    <div class="game-card">
+
+        <div class="lock">
+            ❤️
+        </div>
+
+        <h1>
+            Happy Raksha Bandhan, Nana! ❤️
+        </h1>
+
+        <p>
+            Before you see your surprise,
+            I want you to know something...
+        </p>
+
+        <button onclick="showMessage()">
+            💌 Read My Message
+        </button>
+
+    </div>
+
+
+
+    <!-- ================================= -->
+    <!-- MESSAGE -->
+    <!-- ================================= -->
+
+    <div id="message"
+         class="game-card"
+         style="display: none;">
+
+        <h2>
+            A Little Message For You ❤️
+        </h2>
+
+        <p>
+
+            You're not just my brother...
+            <br><br>
+
+            You're one of the most special people
+            in my life. 🥹❤️
+
+            <br><br>
+
+            We may fight,
+            tease each other,
+            irritate each other...
+
+            <br><br>
+
+            But no matter what happens,
+            our bond will always remain special. ❤️
+
+            <br><br>
+
+            Thank you for being my
+            forever partner in crime. 😌😂
+
+            <br><br>
+
+            Love you always, Nana! ❤️
+
+        </p>
+
+        <button onclick="openNextSurprise()">
+            🎁 Open Next Surprise
+        </button>
+
+    </div>
+
+
+
+    <!-- ================================= -->
+    <!-- LEVEL 1 -->
+    <!-- ================================= -->
+
+    <div class="secret-game"
+         id="secretGame"
+         style="display: none;">
+
+        <div class="game-card">
+
+            <div class="lock">
+                🔐
+            </div>
+
+            <p class="level">
+                LEVEL 1
+            </p>
+
+            <h2>
+                Let's Test Your Brother-Sister Knowledge 😌
+            </h2>
+
+            <p>
+                Ready, Nana? 👀
+                <br>
+                Choose the correct answer!
+            </p>
+
+            <h3>
+                Who knows me better? ❤️
+            </h3>
+
+            <div class="options">
+
+                <button onclick="correctAnswer()">
+                    😎 You
+                </button>
+
+                <button onclick="wrongAnswer()">
+                    😂 Nobody
+                </button>
+
+                <button onclick="wrongAnswer()">
+                    🤔 Google
+                </button>
+
+            </div>
+
+            <p id="gameResult"></p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================= -->
+    <!-- LEVEL 2 -->
+    <!-- ================================= -->
+
+    <div class="level-two"
+         id="levelTwo"
+         style="display: none;">
+
+        <div class="game-card">
+
+            <div class="lock">
+                💌
+            </div>
+
+            <p class="level">
+                LEVEL 2
+            </p>
+
+            <h2>
+                Complete My Thought ❤️
+            </h2>
+
+            <p>
+                You already know the answer...
+                don't you, Nana? 😌
+            </p>
+
+            <h3>
+                No matter how much we fight,
+                I will always ______.
+            </h3>
+
+            <div class="options">
+
+                <button onclick="levelTwoWrong()">
+                    Ignore you 😌
+                </button>
+
+                <button onclick="levelTwoWrong()">
+                    Run away 😂
+                </button>
+
+                <button onclick="levelTwoCorrect()">
+                    Be there for you ❤️
+                </button>
+
+                <button onclick="levelTwoWrong()">
+                    Forget you 😜
+                </button>
+
+            </div>
+
+            <p id="levelTwoResult"></p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================= -->
+    <!-- LEVEL 3 -->
+    <!-- ================================= -->
+
+    <div class="treasure-hunt"
+         id="levelThree"
+         style="display: none;">
+
+        <h1>
+            🗺️ The Final Treasure Hunt
+        </h1>
+
+        <p class="treasure-intro">
+
+            You've made it this far, Nana... 👀❤️
+
+            <br><br>
+
+            But your final surprise is hidden
+            inside these treasures.
+
+            <br>
+
+            Unlock both treasures
+            to discover your final gift! 🔐🎁
+
+        </p>
+
+
+
+        <!-- ================================= -->
+        <!-- TREASURE CONTAINER -->
+        <!-- ================================= -->
+
+        <div class="treasure-container">
+
+
+
+            <!-- ================================= -->
+            <!-- MEMORY TREASURE -->
+            <!-- ================================= -->
+
+            <div class="treasure-card"
+                 id="memoryCard">
+
+                <div class="treasure-icon">
+                    📸
+                </div>
+
+                <h2>
+                    MEMORIES
+                </h2>
+
+                <p>
+                    A memory is waiting for you... 👀
+                    <br>
+                    But first, solve the clue! 🔐
+                </p>
+
+                <p>
+
+                    <b>Clue:</b>
+
+                    <br><br>
+
+                    "Mana bond lo most common
+                    thing enti?" 😜
+
+                </p>
+
+
+                <button onclick="checkMemoryAnswer('fights')">
+                    😂 Fights
+                </button>
+
+                <button onclick="checkMemoryAnswer('study')">
+                    📚 Studying
+                </button>
+
+                <button onclick="checkMemoryAnswer('sleep')">
+                    😴 Sleeping
+                </button>
+
+
+                <p id="memoryResult"></p>
+
+
+
+                <!-- ================================= -->
+                <!-- MEMORY PHOTOS -->
+                <!-- ================================= -->
+
+                <div id="memoryReveal"
+                     style="display: none;">
+
+                    <h3>
+                        🔓 MEMORY UNLOCKED!
+                    </h3>
+
+                    <p>
+
+                        Mana silly fights,
+                        jokes, teasing...
+
+                        <br>
+
+                        ivanni kuda oka beautiful
+                        memory ye. ❤️
+
+                    </p>
+
+
+                    <div class="memory-gallery">
+
+                        <img src="Images/bro1.jpg"
+                             alt="Memory 1">
+
+                        <img src="Images/bro2.jpg"
+                             alt="Memory 2">
+
+                        <img src="Images/bro3.jpg"
+                             alt="Memory 3">
+
+                        <img src="Images/bro4.jpg"
+                             alt="Memory 4">
+
+                        <img src="Images/bro5.jpg"
+                             alt="Memory 5">
+
+                        <img src="Images/bro6.jpg"
+                             alt="Memory 6">
+
+                        <img src="Images/bro7.jpg"
+                             alt="Memory 7">
+
+                        <img src="Images/bro8.jpg"
+                             alt="Memory 8">
+
+                        <img src="Images/bro9.jpg"
+                             alt="Memory 9">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================= -->
+            <!-- WORDS TREASURE -->
+            <!-- ================================= -->
+
+            <div class="treasure-card"
+                 id="wordsCard">
+
+                <div class="treasure-icon">
+                    💌
+                </div>
+
+                <h2>
+                    WORDS
+                </h2>
+
+                <p>
+
+                    One little puzzle stands
+                    between you and the next treasure... 👀
+
+                </p>
+
+                <p>
+
+                    <b>
+                        Complete the sentence:
+                    </b>
+
+                    <br><br>
+
+                    "My brother is my ______." ❤️
+
+                </p>
+
+
+                <button onclick="checkWordsAnswer('best')">
+                    🥰 Best Friend
+                </button>
+
+                <button onclick="checkWordsAnswer('enemy')">
+                    😂 Enemy
+                </button>
+
+                <button onclick="checkWordsAnswer('stranger')">
+                    😭 Stranger
+                </button>
+
+
+                <p id="wordsResult"></p>
+
+
+                <div id="wordsReveal"
+                     style="display: none;">
+
+                    <h3>
+                        🔓 WORDS UNLOCKED!
+                    </h3>
+
+                    <p>
+
+                        You're not just my brother...
+
+                        <br>
+
+                        You're one of my favourite people
+                        and my forever partner in crime. ❤️
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================= -->
+            <!-- FINAL GIFT -->
+            <!-- ================================= -->
+
+            <div class="treasure-card locked"
+                 id="finalCard">
+
+                <div class="treasure-icon">
+                    🎁
+                </div>
+
+                <h2>
+                    FINAL GIFT
+                </h2>
+
+                <p id="finalHint">
+
+                    🔒 Two treasures are still waiting...
+
+                </p>
+
+
+                <button id="finalButton"
+                        onclick="unlockFinal()"
+                        disabled>
+
+                    🔒 Locked
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================================= -->
+        <!-- FINAL REVEAL -->
+        <!-- ================================= -->
+
+        <div class="final-surprise"
+             id="finalSurprise"
+             style="display: none;">
+
+            <div class="final-animation">
+
+                🎉 ✨ 🎁 ✨ 🎉
+
+            </div>
+
+
+            <h1>
+
+                YOU FOUND THE FINAL TREASURE! ❤️
+
+            </h1>
+
+
+            <h2>
+
+                Happy Raksha Bandhan,
+                Nana! 🥰
+
+            </h2>
+
+
+            <p class="final-message">
+
+                This little surprise may be
+                just a website...
+
+                <br><br>
+
+                But every word, every picture
+                and every little detail
+                was made with lots of love. ❤️
+
+                <br><br>
+
+                We may fight, tease and irritate
+                each other,
+
+                <br>
+
+                but at the end of the day,
+
+                <br>
+
+                you'll always be my brother
+                and my forever partner in crime. ❤️
+
+                <br><br>
+
+                <b>
+                    I'll always be there for you. ❤️
+                </b>
+
+            </p>
+
+
+            <div class="big-heart">
+                ❤️
+            </div>
+
+
+            <h3>
+
+                Once again...
+
+                <br>
+
+                Happy Raksha Bandhan,
+                Nana! 🎀
+
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================= -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
